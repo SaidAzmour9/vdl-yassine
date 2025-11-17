@@ -78,7 +78,7 @@ def handle_webhook():
             # Filter by store_id
             store_id = node.get("store_id")
             if store_id != ALLOWED_STORE_ID:
-                print("ℹ️ Ignored order due to store_id filter:", store_id, flus=True)
+                print("ℹ️ Ignored order due to store_id filter:", store_id, flush=True)
                 return jsonify({"message": "Ignored: store_id not allowed"}), 200
 
             # Extract customer/shipping details
